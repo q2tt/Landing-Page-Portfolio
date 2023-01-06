@@ -1,0 +1,109 @@
+//main: ../../style.less
+
+.presentation{
+    &__title{
+        text-align: center;
+    }
+
+    &__box{
+        width: 100%;
+        .add-flex(flex, row, space-around);
+        
+
+    }
+
+    &__img_box{
+        .add-size(500px, 500px);
+    }
+
+    &__content {
+        .add-size(500px, 500px);
+    }
+
+    &__img_box1{
+        .add-size(500px, 300px);
+        background-image: url('./img/Group-8.png');
+        background-size: 500px 300px;
+        background-repeat: no-repeat; 
+        background-size: contain;
+        z-index: 5;
+    }
+ 
+    &__img_box2{
+        .add-size(500px, 300px);
+        background-image: url('./img/Group-6.png');
+        background-size: 500px 300px;
+        background-repeat: no-repeat; 
+        background-size: contain;
+        z-index: 5;
+    }
+
+    &__content_title{
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    &__txt{
+        .font-modify(@black, 18px, 400, 1, 28px);
+    }
+}
+
+
+    .box1::after{
+
+    .add-size(600px, 200px);
+    content: '';
+    background-image: url('./img/Dotted-line1.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -220px;
+    z-index: 1;
+
+    
+}
+.presentation__fadingEffect1{
+
+    .add-size(0, 200px);
+    margin: 0 auto;
+    content: '';
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0;
+    bottom: -220px;
+    z-index: 3;
+    animation: showHide 5s ease normal  1;
+    -moz-animation: showHide 5s ease-in alternate 1; /* Firefox */
+    -webkit-animation: showHide 5s ease-in alternate 1; /* Safari and Chrome */
+    -ms-animation: showHide 5s ease-in alternate 1; /* IE10 */
+    -o-animation: showHide 5s ease-in alternate 1; /* Opera */
+    animation: showHide 5s ease-in alternate 1;
+}
+
+@keyframes showHide {
+    0% {width: 100%}
+    100% {width: 0%;
+    }
+}
+
+@-webkit-keyframes showHide { /* Chrome, Safari */
+    0% {width:100%}
+    100% {width:0%;}
+}
+@-moz-keyframes showHide { /* FF */
+    0% {width:100%}
+    100% {width:0%;}
+}
+@-ms-keyframes showHide { /* IE10 */
+    0% {width:100%}
+    100% {width:0%;}
+}
+@-o-keyframes showHide { /* Opera */
+    0% {width:100%}
+    100% {width:0%;}
+}
+@keyframes showHide {
+    0% {width:100%}
+    100% {width:0%;}
+}

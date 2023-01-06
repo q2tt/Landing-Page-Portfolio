@@ -1,0 +1,71 @@
+//main: ../../style.less
+
+
+
+.header{
+    .add-size(70%, calc(600px + 40vw));
+    @media @size-xl {
+        .add-size(70%, calc(600px + 15vw));
+    }
+
+    @media @size-l {
+        .add-size(70%, calc(600px + 15vw)); 
+    }
+    @media @size-md {
+        .add-size(70%, calc(450px + 10vw));  
+    }
+
+    &__content-box{
+        .add-size(400px, auto);
+        margin: 50px 0 40px 0;
+    }
+
+    &__title{
+        margin: 0 0 40px 0;
+        z-index: 6;
+    }
+
+    &__txt{
+        margin: 0 0 40px 0;
+        z-index: 6;
+    }
+
+
+    &::after{ 
+        .add-size(70%, calc(600px + 40vw));
+        content: '';
+        background-image: url('./img/illustration.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-x: 200px ;
+        background-position-y: -400px;  
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+
+        @media @size-xl {
+            .add-size(70%, calc(600px + 15vw));
+            background-position-x: 100px ;
+            background-position-y: -200px;  
+        }
+
+        @media @size-l {
+            .add-size(70%, calc(600px + 15vw));
+            background-position-x: 100px ;
+            background-position-y: -200px;  
+        }
+        @media @size-md {
+            .add-size(70%, calc(450px + 10vw));
+            background-position-x: 80px ;
+            background-position-y: -110px;  
+        }
+        @media @size-s {
+            .add-size(70%, calc(600px + 15vw));
+            background-position-x: 100px ;
+            background-position-y: -200px;  
+        }
+    }
+
+}
