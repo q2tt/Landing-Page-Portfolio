@@ -421,23 +421,47 @@
 // small title
 .presentation__content_title1._active {
   animation: showText 1s ease 4s normal 1 both;
+
+  @media @size-xl {
+    animation: showText 1s ease .8s normal 1 both;
+    }
 }
 .presentation__content_title2._active {
   animation: showText 1s ease 5.2s normal 1 both;
+
+  @media @size-xl {
+    animation: showText 1s ease .8s normal 1 both;
+    }
 }
 .presentation__content_title3._active {
   animation: showText 1s ease 8s normal 1 both;
+
+  @media @size-xl {
+    animation: showText 1s ease .8s normal 1 both;
+    }
 }
 
 //text
 .presentation__txt1._active {
   animation: showText 1s ease 5s normal 1 both;
+
+  @media @size-xl {
+    animation: showText 1s ease 1.2s normal 1 both;
+    }
 }
 .presentation__txt2._active {
   animation: showText 1s ease 7s normal 1 both;
+
+  @media @size-xl {
+    animation: showText 1s ease 1.2s normal 1 both;
+    }
 }
 .presentation__txt3._active {
   animation: showText 1s ease 8.5s normal 1 both;
+
+  @media @size-xl {
+    animation: showText 1s ease 1.2s normal 1 both;
+    }
 }
 
 @keyframes showText {
@@ -500,6 +524,15 @@
   -ms-animation: showImg 1s ease 0s alternate 1 both;
   -o-animation: showImg 1s ease 0s alternate 1 both;
   animation: showImg 1s ease 0s alternate 1 both;
+
+  @media @size-xl {
+    animation: showImg 1s ease .2s normal 1 both;
+    -moz-animation: showImg 1s ease .2s alternate 1 both;
+    -webkit-animation: showImg 1s ease .2s alternate 1 both;
+    -ms-animation: showImg 1s ease .2s alternate 1 both;
+    -o-animation: showImg 1s ease .2s alternate 1 both;
+    animation: showImg 1s ease .2s alternate 1 both;
+ }
 }
 .presentation__img_box2._active {
   animation: showImg 1s ease 3s normal 1 both;
@@ -508,6 +541,15 @@
   -ms-animation: showImg 1s ease 3s alternate 1 both;
   -o-animation: showImg 1s ease 3s alternate 1 both;
   animation: showImg 1s ease 3s alternate 1 both;
+
+  @media @size-xl {
+    animation: showImg 1s ease .2s normal 1 both;
+    -moz-animation: showImg 1s ease .2s alternate 1 both;
+    -webkit-animation: showImg 1s ease .2s alternate 1 both;
+    -ms-animation: showImg 1s ease .2s alternate 1 both;
+    -o-animation: showImg 1s ease .2s alternate 1 both;
+    animation: showImg 1s ease .2s alternate 1 both;
+ }
 }
 
 @keyframes showImg {
@@ -564,11 +606,20 @@
 
 .presentation__img_box3._active {
   animation: showImg3 1s ease 6s normal 1 both;
-  -moz-animation: showImg 1s ease 3s alternate 1 both;
-  -webkit-animation: showImg 1s ease 3s alternate 1 both;
-  -ms-animation: showImg 1s ease 3s alternate 1 both;
-  -o-animation: showImg 1s ease 3s alternate 1 both;
+  -moz-animation: showImg3 1s ease 6s alternate 1 both;
+  -webkit-animation: showImg3 1s ease 6s alternate 1 both;
+  -ms-animation: showImg3 1s ease 6s alternate 1 both;
+  -o-animation: showImg3 1s ease 6s alternate 1 both;
   animation: showImg3 1s ease 6s alternate 1 both;
+
+  @media @size-xl {
+    animation: showImg3 1s ease .2s normal 1 both;
+    -moz-animation: showImg3 1s ease .2s alternate 1 both;
+    -webkit-animation: showImg3 1s ease .2s alternate 1 both;
+    -ms-animation: showImg3 1s ease .2s alternate 1 both;
+    -o-animation: showImg3 1s ease .2s alternate 1 both;
+    animation: showImg3 1s ease .2s alternate 1 both;
+ }
 }
 
 @keyframes showImg3 {
