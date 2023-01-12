@@ -6,11 +6,19 @@
 }
 
 .big_title{
-    .font-modify(@black, 28px, 400, 1, 34px);
+    .font-modify(@black, calc(1.75rem + 0.3vw), 400, 1, calc(2.125rem + 0.3vw));
     font-family: @main-font-family;
+
+    @media @size-xs {
+        .font-modify(@black, 1.5rem , 400, 1, 1.75rem );
+    }
 }
 
 .small_title{
-    .font-modify(@black, 20px, 400, 1, 24px);
+    .font-modify(@black, calc(1.37rem + 0.3vw), 400, 1, calc(1.5rem + 0.3vw));
     font-family: @main-font-family;
+
+    @media @size-s {
+        .font-modify(@black, 1.15rem , 400, 1, 1.5rem );
+    }
 }

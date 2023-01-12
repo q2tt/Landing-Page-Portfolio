@@ -1,8 +1,31 @@
 //main: ../../style.less
 body{
     font-family: @title-font-family;
+    color: @body-color;
 }
 .container{
-    width: 80%;
+    width: 1700px;
     margin: 0 auto;
+
+    @media @size-xxl {
+        width: 1350px;
+    }
+
+    @media @size-xl {
+        width: 1100px;
+    }
+
+    @media @size-l {
+        width: 900px;
+    }
+
+    @media @size-md {
+        width: 700px;
+    }
+    @media @size-s {
+        width: 90%;
+    }
+    @media @size-xl {
+        width: 90%;
+    }
 }
