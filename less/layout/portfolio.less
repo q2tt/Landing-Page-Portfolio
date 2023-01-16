@@ -4,44 +4,170 @@
     &__title{
         text-align: center;
         margin-bottom: 100px;
+
+        @media @size-xl {
+            margin-bottom: 80px;
+        }
+
+        @media @size-s {
+            margin-bottom: 40px;
+        }
     }
 
     &__wrap{
         display: grid;
         grid-template-columns: 750px 750px;
-        grid-template-rows: 1000px 1000px 100px;
+        grid-template-rows: 1000px 1000px auto;
         grid-template-areas: 'example1 example2'
                                 'example3 example4'
                                 'btn-box btn-box';
         width: 1500px;
         margin: 0 auto;
+
+        @media @size-xxl {
+            grid-template-columns: 650px 650px;
+            grid-template-rows: 900px 900px auto;
+            width: 1300px;
+        }
+
+        @media @size-xl {
+            grid-template-columns: 550px 550px;
+            grid-template-rows: 800px 800px auto;
+            width: 1100px;
+        }
+
+        @media @size-l {
+            grid-template-columns: 450px 450px;
+            grid-template-rows: 600px 600px auto;
+            width: 900px;
+        }
+
+        @media @size-md {
+            grid-template-columns: 350px 350px;
+            grid-template-rows: 450px 450px auto;
+            width: 700px;
+        }
+
+        @media @size-s {
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 350px 350px auto;
+            width: 90%;
+        }
+
+        @media @size-xs {
+            grid-template-columns: 1fr;
+        grid-template-rows: 400px 400px 400px 400px auto;
+        grid-template-areas: 'example1'
+                            'example3'
+                            'example2'
+                            'example4'
+                            'btn-box';
+        width: 100%;
+        }
     }
 
-    &__example1, &__example2, &__example3, &__example4{
-       width: 750px;
-       box-sizing: border-box;   
-    }
 
     &__example1{
         grid-area: example1;
         padding: 100px 50px 0 0;
+
+        @media @size-xl {
+            padding: 100px 35px 0 0;
+        }
+
+        @media @size-l {
+            padding: 80px 35px 0 0;
+        }
+
+        @media @size-s {
+            padding: 60px 25px 0 0;
+        }
+
+       
     }
 
     &__example2{
         grid-area: example2;
         padding: 0 0 100px 50px;
+
+        @media @size-xl {
+            padding: 0 0 100px 35px;
+        }
+
+        @media @size-l {
+            padding: 0 0 80px 35px;
+        }
+
+        @media @size-s {
+            padding: 0 0 60px 25px;
+        }
     }
 
     &__example3{
         grid-area: example3;
         padding: 100px 50px 0 0;
+
+        @media @size-xl {
+            padding: 100px 35px 0 0;
+        }
+
+        @media @size-l {
+            padding: 80px 35px 0 0;
+        }
+
+        @media @size-s {
+            padding: 60px 25px 0 0;
+        }
     }
 
     &__example4{
         grid-area: example4;
         padding: 0 0 100px 50px;
+
+        @media @size-xl {
+            padding: 0 0 100px 35px;
+        }
+
+        @media @size-l {
+            padding: 0 0 80px 35px;
+        }
+
+        @media @size-s {
+            padding: 0 0 60px 25px;
+        }
     }
-    
+    &__example1, &__example2, &__example3, &__example4{
+        width: 750px;
+        box-sizing: border-box;   
+ 
+        @media @size-xxl {
+         width: 650px;
+         }
+ 
+         @media @size-xl {
+             width: 550px;
+         }
+ 
+         @media @size-l {
+             width: 450px;
+         }
+ 
+         @media @size-md {
+             width: 350px;
+         }
+ 
+         @media @size-s {
+             width: 100%;
+         }
+ 
+         @media @size-xs {
+             max-width: 400px;
+             margin: 0 auto;
+             padding: 0 0 30px 0;
+         }
+     }
+
+
     &__example_img1, &__example_img2, &__example_img3, &__example_img4{
         background-size: 100% 100%;
         .add-size(100%, 100%);
@@ -68,6 +194,18 @@
     &__btn_block{
         margin-top: 100px;
         grid-area: btn-box;
+
+        @media @size-l {
+            margin-top: 60px;
+        }
+
+        @media @size-l {
+            margin-top: 40px;
+        }
+
+        @media @size-xs {
+            margin-top: 0px;
+        }
     }
     &__btn{
         display: block;
