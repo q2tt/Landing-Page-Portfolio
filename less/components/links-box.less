@@ -1,0 +1,32 @@
+//main: ../../style.less
+.links-box {
+  .add-flex(flex, row, baseline);
+  align-items: center;
+
+  &__item {
+    display: block;
+    text-decoration: none;
+    .add-size( 30px, 30px);
+    box-sizing: border-box;
+    padding: 1px;
+    margin-left: 22px;
+  }
+
+  &__item:hover {
+    cursor: pointer;
+    padding: 0;
+  }
+
+  &__img {
+    .add-size(26px, 26px);
+  }
+
+  &__img:hover,
+  &__img:focus {
+    cursor: pointer;
+    .add-size( 30px, 30px);
+    filter: invert(27%) sepia(18%) saturate(2688%) hue-rotate(306deg)
+      brightness(122%) contrast(99%)
+      drop-shadow(5px 0px 1px rgba(145, 146, 151, 0.404));
+  }
+}
