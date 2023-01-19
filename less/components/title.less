@@ -1,8 +1,15 @@
 //main: ../../style.less
 
 .bigest_title{
-    .font-modify(@black, 36px, 400, 1, 40px);
+    .font-modify(@black, calc(2.25rem + 0.3vw), 700, 1, calc(2.5rem + 0.3vw));
     font-family: @main-font-family;
+
+    @media @size-l {
+        .font-modify(@black, 2.25rem , 700, 1, 2.5rem );
+    }
+    @media @size-xs {
+        .font-modify(@black, 1.6rem , 700, 1, 1.7rem );
+    }
 }
 
 .big_title{

@@ -1,0 +1,116 @@
+//main: ../../style.less
+
+.startProject {
+  .add-size(100%, calc(700px + 25vw));
+  @media @size-xl {
+    .add-size(100%, calc(500px + 25vw));
+  }
+
+  @media @size-l {
+    .add-size(100%, calc(320px + 25vw));
+  }
+  @media @size-md {
+    .add-size(100%, calc(370px + 25vw));
+  }
+
+  @media @size-s {
+    .add-size(100%, 430px);
+  }
+  @media @size-xs {
+    .add-size(100%, 430px);
+  }
+
+  &__content_box {
+    padding: 500px 0 0 200px;
+
+    @media @size-xxl {
+      padding: 500px 0 0 80px;
+    }
+
+    @media @size-xl {
+      padding: 300px 0 0 0px;
+    }
+
+    @media @size-l {
+      padding: 170px 0 0 0px;
+    }
+
+    @media @size-s {
+      padding: 70px 0 0 0px;
+    }
+
+    @media @size-xs {
+      padding: 50px 0 0 0px;
+    }
+  }
+  &__title {
+    padding: 0px 0 72px 0;
+    width: 450px;
+
+    @media @size-l {
+      width: 400px;
+      padding: 0px 0 50px 0;
+    }
+
+    @media @size-md {
+      width: 330px;
+    }
+
+    @media @size-xs {
+      width: 280px;
+      padding: 0px 0 24px 0;
+    }
+  }
+  
+  &__btn {
+    margin: 0 0 72px 0;
+
+    @media @size-l {
+      margin: 0px 0 50px 0;
+    }
+
+    @media @size-xs {
+      margin: 0px 0 24px 0;
+    }
+  }
+
+  &::after {
+    .add-size(70%, calc(700px + 40vw));
+    content: "";
+    background-image: url("./img/Contact-Illustr.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 300px;
+    background-position-y: -20px;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    margin-top: calc(-300px + -40vw);
+    z-index: 1;
+
+    @media @size-xxl {
+      .add-size(60%, calc(700px + 40vw));
+      margin-top: calc(-500px + -40vw);
+      background-position-x: 100px;
+    }
+
+    @media @size-xl {
+      .add-size(60%, calc(400px + 40vw));
+      margin-top: calc(-230px + -40vw);
+    }
+    @media @size-l {
+      .add-size(60%, calc(380px + 40vw));
+      background-position-x: 50px;
+    }
+    @media @size-s {
+      .add-size(400px, 500px);
+      background-position-x: 100px;
+      margin-top: -400px;
+    }
+    @media @size-xs {
+      .add-size(300px, calc(300px + 10vw));
+      background-position-x: 40px;
+      margin-top: calc(-110px + -5vw);
+    }
+  }
+}

@@ -9,14 +9,31 @@
 @import './less/components/logo.less';
 @import './less/components/buttons.less';
 @import './less/components/title.less';
+@import './less/components/links-box.less';
 
 @import './less/layout/navigation.less';
 @import './less/layout/header.less';
 @import './less/layout/presentation.less';
+@import './less/layout/portfolio.less';
+@import './less/layout/startProject.less';
+@import './less/layout/footer.less';
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  header {
+    flex-shrink: 0;
+  }
+  
+  footer {
+    flex-shrink: 0;
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
 
 
-
-
-.ke{
-    background-color: aqua;
-}
