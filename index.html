@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
-<body>
+<body><div class="container">
     <header class="header">
-        <div class="container">
+        
             <nav class="nav">
-                <div class="logo__box">
+                <div class="logo__box nav__logo">
                     <object class="logo__svg" data="/img/Li..svg" type="image/svg+xml"></object>
                 </div>
-                <ul class="nav__links">
+                <input type="checkbox"  class="nav__input" id="active">
+                 <label for="active" class="nav__label"></label>
+            <div class="nav__wrapper ">
+                 <ul class="nav__links">
                     <li class="nav__item">Work</li>
                     <li class="nav__item">About</li>
                     <li class="nav__item">Resume</li>
                     <li class="nav__item">Contact</li>
                 </ul>
+            </div>
             </nav>
             <div class="header__content-box">
                 <h1 class="bigest_title header__title">Hello, I'm Lisa</h1>
@@ -41,10 +45,10 @@
                     </div>
                 </div>
             </div>
-        </div>  
+     
     </header>
+
     <main>
-        <div class="container">
             <section class="presentation">
                 <h2 class="big_title presentation__title _anim-items">Things I Do</h2>
                     <div class="presentation__wrap"> 
@@ -122,12 +126,11 @@
             <div class="startProject__img_box"></div>
         </section>
 
-    </div>
     </main>
     <footer class="footer">
         <p>footer</p>
     </footer>
-    
+</div>
     <script src="script.js"></script>
 </body>
 </html>
