@@ -1,24 +1,24 @@
 //main: ../../style.less
 
 .header {
-  .add-size(70%, calc(500px + 30vw));
-  background-color: beige;
+  .add-size(100%, calc(500px + 30vw));
 
   @media @size-xxl {
-    .add-size(70%, calc(600px + 20vw));
+    .add-size(100%, calc(600px + 20vw));
   }
   @media @size-xl {
-    .add-size(70%, calc(550px + 15vw));
+    .add-size(100%, calc(550px + 15vw));
   }
 
   @media @size-l {
-    .add-size(70%, calc(500px + 15vw));
+    .add-size(100%, calc(500px + 15vw));
   }
   @media @size-md {
-    .add-size(70%, calc(450px + 15vw));
+    .add-size(100%, calc(450px + 15vw));
   }
   @media @size-xs {
     .add-size(100%, calc(450px + 15vw));
+    margin-bottom: 20px;
   }
 
   &__content-box {
@@ -52,6 +52,9 @@
   &__title {
     margin: 0 0 60px 0;
     z-index: 6;
+    transform: translate(-280px, 0%);
+    opacity: 0;
+    transition: all 0.6s ease 0.7s;
 
     @media @size-xxl {
       margin: 0 0 50px 0;
@@ -62,9 +65,17 @@
     }
   }
 
+  &__title._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+
   &__txt {
     margin: 0 0 60px 0;
     z-index: 6;
+    transform: translate(-280px, 0%);
+    opacity: 0;
+    transition: all 0.6s ease 0.9s;
     .font-modify(@black, calc(1.125rem + 0.3vw), 400, 1, calc(1.5rem + 0.3vw));
 
     @media @size-xxl {
@@ -75,9 +86,17 @@
       margin: 0 0 30px 0;
     }
   }
+  
+  &__txt._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 
   &__btn {
     margin: 0 0 90px 0;
+    transform: translate(-100px, 0%);
+    transition: all 0.6s ease 1.4s;
+    opacity: 0;
 
     @media @size-xxl {
       margin: 0 0 70px 0;
@@ -90,6 +109,26 @@
     @media @size-s {
       margin: 0 0 30px 0;
     }
+  }
+
+  &__btn._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+
+  &__links {
+    transform: translate(-300px, 0%);
+    transition: all 0.6s ease 1.6s;
+    opacity: 0;
+
+    @media @size-s {
+      transform: translate(-100px, 0%);
+    }
+  }
+
+  &__links._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
   }
 
   &::after {
@@ -105,6 +144,11 @@
     top: 0;
     right: 0;
     z-index: 1;
+
+    transform: scale(0, 0);
+    transform-origin: top right;
+    transition: all 0.6s ease 0s;
+
     @media @size-xxl {
       .add-size(70%, calc(600px + 20vw));
       background-position-x: 150px;
@@ -138,5 +182,8 @@
       background-position-x: 40px;
       background-position-y: -0px;
     }
+  }
+  &._active::after {
+    transform: scale(1, 1);
   }
 }

@@ -189,6 +189,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     transition: transform 1s;
+    z-index: 2;
   }
   &__example_img1 {
     background-image: url("./img/0e72dccf58a2ac04d67535cf277d682a.jpeg");
@@ -248,33 +249,34 @@
     transform: translate(0px, 0px);
     opacity: 1;
   }
-}
-.portfolio__example1._active {
-  animation: showBox .8s ease 0.0s normal 1 both;
 
-  @media @size-xs {
-    animation: showBox .5s ease 0.0s normal 1 both;
+  &__example1._active {
+    animation: showBox 0.8s ease 0s normal 1 both;
+
+    @media @size-xs {
+      animation: showBox 0.5s ease 0s normal 1 both;
+    }
   }
-}
-.portfolio__example2._active {
-  animation: showBox .8s ease 0.1s normal 1 both;
+  &__example2._active {
+    animation: showBox 0.8s ease 0.1s normal 1 both;
 
-  @media @size-xs {
-    animation: showBox .5s ease 0.0s normal 1 both;
+    @media @size-xs {
+      animation: showBox 0.5s ease 0s normal 1 both;
+    }
   }
-}
-.portfolio__example3._active {
-  animation: showBox .8s ease 0.3s normal 1 both;
+  &__example3._active {
+    animation: showBox 0.8s ease 0.3s normal 1 both;
 
-  @media @size-xs {
-    animation: showBox .5s ease 0.0s normal 1 both;
+    @media @size-xs {
+      animation: showBox 0.5s ease 0s normal 1 both;
+    }
   }
-}
-.portfolio__example4._active {
-  animation: showBox .8s ease 0.4s normal 1 both;
+  &__example4._active {
+    animation: showBox 0.8s ease 0.4s normal 1 both;
 
-  @media @size-xs {
-    animation: showBox .5s ease 0.0s normal 1 both;
+    @media @size-xs {
+      animation: showBox 0.5s ease 0s normal 1 both;
+    }
   }
 }
 

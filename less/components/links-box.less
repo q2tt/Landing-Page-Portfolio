@@ -1,4 +1,5 @@
 //main: ../../style.less
+
 .links-box {
   .add-flex(flex, row, baseline);
   align-items: center;
@@ -9,7 +10,8 @@
     .add-size( 30px, 30px);
     box-sizing: border-box;
     padding: 1px;
-    margin-left: 22px;
+    margin-right: 22px;
+    z-index: 1;
   }
 
   &__item:hover {
@@ -19,6 +21,7 @@
 
   &__img {
     .add-size(26px, 26px);
+    z-index: 3;
   }
 
   &__img:hover,

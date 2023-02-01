@@ -7,9 +7,28 @@
     .add-flex(flex, row, center);
     align-items: center;
     cursor: pointer;
+
+    @media @size-s {
+        .add-size(47px, 47px);
+    }
+
+    @media @size-xs {
+        .add-size(35px, 35px);
+    }
+}
+.logo__box:hover{
+    background-color:  #469f60;;
 }
 
 .logo__svg{
     cursor: pointer;
     .add-size(34px, 23px);
+
+    @media @size-s {
+        .add-size(28px, 17px);
+    }
+
+    @media @size-xs {
+        .add-size(22px, 16px);
+    }
 }

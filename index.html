@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <header class="header">
+        <header id="header" class="header _anim-items anim-no-hide">
 
             <nav class="nav">
                 <div class="logo__box nav__logo">
@@ -21,21 +21,21 @@
                 <label for="active" class="nav__label"></label>
                 <div class="nav__wrapper ">
                     <ul class="nav__links">
-                        <li class="nav__item">Work</li>
-                        <li class="nav__item">About</li>
-                        <li class="nav__item">Resume</li>
-                        <li class="nav__item">Contact</li>
+                        <li id="workBtn" class="nav__item">Work</li>
+                        <li id="aboutBtn" class="nav__item">About</li>
+                        <li id="resumeBtn" class="nav__item">Resume</li>
+                        <li id="contactBtn" class="nav__item">Contact</li>
                     </ul>
                 </div>
             </nav>
             <div class="header__content-box">
-                <h1 class="bigest_title header__title">Hello, I'm Lisa</h1>
-                <p class="header__txt">Multifunctional designer/developer
+                <h1 class="bigest_title header__title _anim-items">Hello, I'm Lisa</h1>
+                <p class="header__txt _anim-items">Multifunctional designer/developer
                     based in Bath — a traditionally
                     trained designer who codes.</p>
-                <button class="main_btn header__btn">View Work</button>
-                <div class="sotial_media__links header__links">
-                    <div class="startProject__links links-box">
+                <button class="main_btn header__btn _anim-items">View Work</button>
+                <div class="sotial_media__links ">
+                    <div class="links-box header__links _anim-items">
                         <a href="#" class="links-box__item">
                             <img src="./img/linkedin.svg" class="links-box__img" alt="LinkedIn">
                         </a>
@@ -52,7 +52,7 @@
         </header>
 
         <main>
-            <section class="presentation">
+            <section id="presentation" class="presentation _anim-items anim-no-hide">
                 <h2 class="big_title presentation__title _anim-items">Things I Do</h2>
                 <div class="presentation__wrap">
                     <div class="presentation__box presentation__box1">
@@ -98,7 +98,7 @@
                 </div>
             </section>
 
-            <section class="portfolio">
+            <section id="portfolio" class="portfolio _anim-items">
                 <h2 class="portfolio__title big_title _anim-items">Recent Work</h2>
                 <div class="portfolio__wrap">
                     <div class="portfolio__example1 _anim-items">
@@ -119,11 +119,11 @@
                 </div>
             </section>
 
-            <section class="startProject">
+            <section id="startProject" class="startProject _anim-items anim-no-hide">
                 <div class="startProject__content_box">
-                    <h2 class="startProject__title bigest_title">Ready to make something amazing?</h2>
-                    <button class="startProject__btn main_btn">Start A New Project</button>
-                    <div class="startProject__links links-box">
+                    <h2 class="startProject__title bigest_title _anim-items">Ready to make something amazing?</h2>
+                    <button class="startProject__btn main_btn _anim-items">Start A New Project</button>
+                    <div class="startProject__links links-box _anim-items">
                         <a href="#" class="links-box__item">
                             <img src="./img/linkedin.svg" class="links-box__img" alt="LinkedIn">
                         </a>
@@ -163,10 +163,10 @@
                 </div>
                 <div class="footer__links">
                     <ul class="footer__nav-links">
-                        <li class="footer__nav-item">Work</li>
-                        <li class="footer__nav-item">About</li>
-                        <li class="footer__nav-item">Resume</li>
-                        <li class="footer__nav-item">Contact</li>
+                        <li id="workBtnFooter" class="footer__nav-item">Work</li>
+                        <li id="aboutBtnFooter" class="footer__nav-item">About</li>
+                        <li id="resumeBtnFooter" class="footer__nav-item">Resume</li>
+                        <li id="contactBtnFooter" class="footer__nav-item">Contact</li>
                     </ul>
                 </div>
 
@@ -174,7 +174,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </body>
 
 </html>
