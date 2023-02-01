@@ -19,10 +19,8 @@ let callbeck = function(entries, observer){
 }
 
 let observer = new IntersectionObserver(callbeck, options);
-console.log(observer)
 
 let targets = document.querySelectorAll('._anim-items');
-console.log(targets)
 targets.forEach(target => {
   observer.observe(target)
 })

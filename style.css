@@ -914,7 +914,7 @@ body {
   width: 70%;
   height: calc(500px + 30vw);
   content: "";
-  background-image: url("img/illustration.svg");
+  background-image: url("img/header.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-x: 200px;
