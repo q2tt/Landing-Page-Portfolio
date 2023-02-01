@@ -1,36 +1,80 @@
-const animItems = document.querySelectorAll("._anim-items");
+const getEl  = (id) => document.getElementById(id);
 
-if (animItems.length > 0) {
-  window.addEventListener("scroll", animOnScroll);
-  function animOnScroll(params) {
-    for (let index = 0; index < animItems.length; index++) {
-      const animItem = animItems[index];
-      const animItemHeight = animItem.offsetHeight;
-      const animItemOffset = offset(animItem).top;
-      const animStart = 4;
-
-      let animItemPoint = window.innerHeight - animItemHeight / animStart;
-      if (animItemHeight > window.innerHeight) {
-        animItemPoint = window.innerHeight - window.innerHeigh / animStart;
-      }
-
-      if (
-        scrollY > animItemOffset - animItemPoint &&
-        scrollY < animItemOffset + animItemHeight
-      ) {
-        animItem.classList.add("_active");
-      } else {
-        if (!animItem.classList.contains("anim-no-hide")) {
-          animItem.classList.remove("_active");
-        }
-      }
-    }
-  }
-  function offset(el) {
-    const rect = el.getBoundingClientRect(),
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-  }
-  animOnScroll();
+let options = {
+  root: null,
+  rootMargin: '150px',
+  threshold: 0.5
 }
+
+let callbeck = function(entries, observer){
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('_active');
+    } else {
+              if (! entry.target.classList.contains("anim-no-hide")) {
+                entry.target.classList.remove("_active");
+              }
+            }
+  })
+}
+
+let observer = new IntersectionObserver(callbeck, options);
+console.log(observer)
+
+let targets = document.querySelectorAll('._anim-items');
+console.log(targets)
+targets.forEach(target => {
+  observer.observe(target)
+})
+
+//scroll
+window.smoothScroll = function(target) {
+  let scrollContainer = target;
+  do {
+      scrollContainer = scrollContainer.parentNode;
+      if (!scrollContainer) return;
+      scrollContainer.scrollTop += 1;
+  } while (scrollContainer.scrollTop == 0);
+  
+  let targetY = 0;
+  do { 
+      if (target == scrollContainer) break;
+      targetY += target.offsetTop;
+  } while (target = target.offsetParent);
+  
+  scroll = function(c, a, b, i) {
+      i++; if (i > 30) return;
+      c.scrollTop = a + (b - a) / 30 * i;
+      setTimeout(function(){ scroll(c, a, b, i); }, 20);
+  }
+  scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+
+getEl('workBtn').addEventListener("click", () => {
+  smoothScroll(getEl('header'));
+  getEl('active').checked = false;
+})
+getEl('aboutBtn').addEventListener("click", () => {
+  smoothScroll(getEl('presentation'));
+  getEl('active').checked = false;
+})
+getEl('resumeBtn').addEventListener("click", () => {
+  smoothScroll(getEl('portfolio'));
+  getEl('active').checked = false;
+})
+getEl('contactBtn').addEventListener("click", () => {
+  smoothScroll(getEl('startProject'));
+  getEl('active').checked = false;
+})
+getEl('workBtnFooter').addEventListener("click", () => {
+  smoothScroll(getEl('header'))
+})
+getEl('aboutBtnFooter').addEventListener("click", () => {
+  smoothScroll(getEl('presentation'))
+})
+getEl('resumeBtnFooter').addEventListener("click", () => {
+  smoothScroll(getEl('portfolio'))
+})
+getEl('contactBtnFooter').addEventListener("click", () => {
+  smoothScroll(getEl('startProject'))
+})
