@@ -1425,7 +1425,7 @@ body {
   }
 }
 .presentation__fadingEffect1-img {
-  background-image: url("img/Dotted-line1.svg");
+  background-image: url("img/doted1.svg");
   margin-top: -230px;
 }
 @media (max-width: 1199px) {
@@ -1439,7 +1439,7 @@ body {
   }
 }
 .presentation__fadingEffect2-img {
-  background-image: url("img/Dotted-line2.svg");
+  background-image: url("img/doted2.svg");
   margin-top: -150px;
 }
 @media (max-width: 767px) {
