@@ -4,6 +4,25 @@ body{
     background-color: @body-color;
 }
 
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  header {
+    flex-shrink: 0;
+  }
+  
+  footer {
+    flex-shrink: 0;
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
+
 .container{
     width: 1700px;
     margin: 0 auto;

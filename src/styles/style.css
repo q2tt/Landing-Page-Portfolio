@@ -419,6 +419,20 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: #ffffff;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header {
+  flex-shrink: 0;
+}
+footer {
+  flex-shrink: 0;
+}
+main {
+  flex: 1 0 auto;
+}
 .container {
   width: 1700px;
   margin: 0 auto;
@@ -914,7 +928,7 @@ body {
   width: 70%;
   height: calc(500px + 30vw);
   content: "";
-  background-image: url("img/header.svg");
+  background-image: url("../img/header.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-x: 200px;
@@ -1139,12 +1153,12 @@ body {
 @media (max-width: 575px) {
   .presentation__img_box1,
   .presentation__img_box2 {
-    --presentation__img-w: calc(100% - 180px);
-    --presentation__img-h: 200px;
+    width: calc(100% - 180px);
+    height: 200px;
   }
 }
 .presentation__img_box1 {
-  background-image: url("img/Group-8.png");
+  background-image: url("../img/Group-8.png");
   transition: all 0.6s ease 0s;
 }
 @media (max-width: 575px) {
@@ -1153,7 +1167,7 @@ body {
   }
 }
 .presentation__img_box2 {
-  background-image: url("img/Group-6.png");
+  background-image: url("../img/Group-6.png");
   transition: all 0.6s ease 1.9s;
 }
 @media (max-width: 575px) {
@@ -1166,7 +1180,7 @@ body {
   --presentation__img3-h: 240px;
   width: var(--presentation__img3-w);
   height: var(--presentation__img3-h);
-  background-image: url("img/Group-140.svg");
+  background-image: url("../img/Group-140.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1200,8 +1214,8 @@ body {
 }
 @media (max-width: 575px) {
   .presentation__img_box3 {
-    --presentation__img-w: calc(100% - 180px);
-    --presentation__img-h: 200px;
+    width: calc(100% - 180px);
+    height: 100px;
     margin-right: auto;
   }
 }
@@ -1425,7 +1439,7 @@ body {
   }
 }
 .presentation__fadingEffect1-img {
-  background-image: url("img/doted1.svg");
+  background-image: url("../img/doted1.svg");
   margin-top: -230px;
 }
 @media (max-width: 1199px) {
@@ -1439,7 +1453,7 @@ body {
   }
 }
 .presentation__fadingEffect2-img {
-  background-image: url("img/doted2.svg");
+  background-image: url("../img/doted2.svg");
   margin-top: -150px;
 }
 @media (max-width: 767px) {
@@ -1511,7 +1525,7 @@ body {
   height: 450px;
   margin-right: auto;
   content: "";
-  background-image: url("img/Left-Leaves.svg");
+  background-image: url("../img/Left-Leaves.svg");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -1554,7 +1568,7 @@ body {
   height: 470px;
   margin-right: auto;
   content: "";
-  background-image: url("img/Group-274.svg");
+  background-image: url("../img/Group-274.svg");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -1882,16 +1896,16 @@ body {
   z-index: 2;
 }
 .portfolio__example_img1 {
-  background-image: url("img/0e72dccf58a2ac04d67535cf277d682a.jpeg");
+  background-image: url("../img/0e72dccf58a2ac04d67535cf277d682a.jpeg");
 }
 .portfolio__example_img2 {
-  background-image: url("img/effa10adf546262a3c52247f845bf03f.jpeg");
+  background-image: url("../img/effa10adf546262a3c52247f845bf03f.jpeg");
 }
 .portfolio__example_img3 {
-  background-image: url("img/53d285312bb040d29dc12fd0fcd13177.jpeg");
+  background-image: url("../img/53d285312bb040d29dc12fd0fcd13177.jpeg");
 }
 .portfolio__example_img4 {
-  background-image: url("img/dafdd64e2a43a56ec13158a23b8e540a.jpeg");
+  background-image: url("../img/dafdd64e2a43a56ec13158a23b8e540a.jpeg");
 }
 .portfolio__example1:hover .portfolio__example_img1 {
   cursor: pointer;
@@ -2109,7 +2123,7 @@ body {
   width: 70%;
   height: calc(700px + 40vw);
   content: "";
-  background-image: url("img/Contact-Illustr.svg");
+  background-image: url("../img/Contact-Illustr.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-x: 300px;
@@ -2169,7 +2183,7 @@ body {
   height: 450px;
   margin-right: auto;
   content: "";
-  background-image: url("img/Left-Leaves.svg");
+  background-image: url("../img/Left-Leaves.svg");
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
